@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*after {
+  box-sizing: border-box;
+}
+/* Need a font from google. */
+body {
+  color: black;
+  font-family: sans-serif;
+}
+/* Center heading and stack them. I want the child paragraph to be italized and smaller and trailing off to the right. */
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* Reset default values */
+h1 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
