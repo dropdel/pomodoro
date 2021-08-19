@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *,
 *:before,
@@ -8,16 +9,28 @@ html {
 }
 /* Need a font from google. */
 body {
-  color: black;
-  font-family: sans-serif;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #1d122f;
+  height: 100%;
 }
 /* Center heading and stack them. I want the child paragraph to be italized and smaller and trailing off to the right. */
 header {
+  height: 20%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+main {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+}
+small {
+  font-size: 0.6em;
+}
 footer {
+  height: 30%;
   display: flex;
   align-items: center;
   flex-direction: column;
