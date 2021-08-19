@@ -1,2 +1,2 @@
-# pomodoro
-Yes, yet another, yet another pomodoro app.
+# Pomodoro
+Yet another pomodoro app.
