@@ -30,7 +30,6 @@ small {
   font-size: 0.6em;
 }
 nav {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
