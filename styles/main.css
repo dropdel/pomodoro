@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  margin: 0;
   height: 100%;
 }
 *,
@@ -13,33 +14,61 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   background-color: #1d122f;
   height: 100%;
+  margin: 0;
 }
+/* Everything above here is perfect. */
 /* Center heading and stack them. I want the child paragraph to be italized and smaller and trailing off to the right. */
 header {
-  height: 20%;
+  height: 10vh;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-main {
-  display: flex;
-  justify-content: center;
-  height: 50%;
-}
-small {
-  font-size: 0.6em;
-}
 nav {
   display: flex;
   justify-content: center;
+  height: 20vh;
 }
 ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  width: 30%;
+  height: 55%;
+  width: 40%;
   background-color: rgb(27, 21, 68);
   border-radius: 35px;
+  padding: 0px;
+}
+@media screen and (max-width: 1024px) {
+  ul {
+    width: 60%;
+  }
+  li {
+    padding: 5px;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  ul {
+    width: 80%;
+  }
+  li {
+    padding: 5px;
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 580px) {
+  ul {
+    width: 100%;
+  }
+  li {
+    padding: 5px;
+    margin: 10px;
+    font-size: 0.8em;
+  }
+  footer > p {
+    font-size: 0.8em;
+  }
 }
 li {
   display: inline-block;
@@ -48,15 +77,32 @@ li {
   /* background: #d21f3c; javascript remember this color */
   opacity: 0.5;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 li:hover {
   cursor: pointer;
 }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+small {
+  font-size: 0.6em;
+}
+
 footer {
-  height: 30%;
+  width: 100%;
+  height: 33vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+}
+footer > p {
+  text-align: center;
 }
 /* Reset default values */
 h1 {
