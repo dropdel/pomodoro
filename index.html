@@ -21,15 +21,16 @@
     </header>
     <nav>
       <ul>
-        <li>pomodoro</li>
-        <li>short break</li>
-        <li>long break</li>
+        <li class="menuItem pomodoro">pomodoro</li>
+        <li class="menuItem sbreak">short break</li>
+        <li class="menuItem lbreak">long break</li>
       </ul>
     </nav>
     <main>
       <!-- Timer area -->
       <section>
-        <time></time>
+        <!-- P is for period. T time duration. -->
+        <time datetime="PT0H0M0S">00:00</time>
         <p>PAUSE</p>
       </section>
     </main>
@@ -38,5 +39,6 @@
       <p>Developed and designed with care 💻☀️ Derrick Thornton</p>
       <!-- Possibly change sun to moon when dark mode is activated. -->
     </footer>
+    <script src="scripts/main.js" type="module"></script>
   </body>
 </html>
