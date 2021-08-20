@@ -11,7 +11,6 @@ document.querySelectorAll("li").forEach((item) => {
     e.path["0"].style.background = "red";
     e.path["0"].style.opacity = "1";
     e.path["0"].style.fontWeight = "bolder";
-    console.log("ww");
   });
 });
 
