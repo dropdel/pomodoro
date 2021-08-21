@@ -19,7 +19,7 @@ body {
 /* Everything above here is perfect. */
 /* Center heading and stack them. I want the child paragraph to be italized and smaller and trailing off to the right. */
 header {
-  height: 10vh;
+  height: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -27,7 +27,7 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  height: 20vh;
+  height: 130px;
 }
 ul {
   list-style: none;
@@ -111,4 +111,7 @@ h1 {
 }
 p {
   margin: 0;
+}
+section > p {
+  cursor: pointer;
 }
