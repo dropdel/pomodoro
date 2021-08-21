@@ -60,6 +60,7 @@ function countDown(min) {
   if (minute.val === 0 && second.val === 0) {
     alert("done!");
     clearInterval(interval);
+    timer.innerHTML = `00:00 😊`;
   }
   if (second.val === 0) {
     minute.val--;
