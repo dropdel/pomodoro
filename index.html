@@ -21,9 +21,21 @@
     </header>
     <nav>
       <ul>
-        <a><li class="menuItem pomodoro">pomodoro</li></a>
-        <a><li class="menuItem sbreak">short break</li></a>
-        <a><li class="menuItem lbreak">long break</li></a>
+        <a
+          ><li class="menuItem pomodoro" onmousedown="bgHighlight(event)">
+            pomodoro
+          </li></a
+        >
+        <a
+          ><li class="menuItem sbreak" onmousedown="bgHighlight(event)">
+            short break
+          </li></a
+        >
+        <a
+          ><li class="menuItem lbreak" onmousedown="bgHighlight(event)">
+            long break
+          </li></a
+        >
       </ul>
     </nav>
     <main>
@@ -39,6 +51,6 @@
       <p>Developed and designed with care 💻☀️ Derrick Thornton</p>
       <!-- Possibly change sun to moon when dark mode is activated. -->
     </footer>
-    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
