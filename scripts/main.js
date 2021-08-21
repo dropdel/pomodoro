@@ -38,17 +38,17 @@ play.addEventListener("click", () => {
     if (timer.innerHTML.includes("25:00")) {
       minute.val = 24;
       second.val = 60;
-      interval = setInterval(countDown, 1000, minute);
+      interval = setInterval(countDown, 1000);
     } else if (timer.innerHTML.includes("5:00")) {
-      minute.val = 4;
-      second.val = 60;
-      interval = setInterval(countDown, 1000, minute);
+      minute.val = 0;
+      second.val = 4;
+      interval = setInterval(countDown, 1000);
     } else if (timer.innerHTML.includes("20:00")) {
       minute.val = 19;
       second.val = 60;
-      interval = setInterval(countDown, 1000, minute);
+      interval = setInterval(countDown, 1000);
     } else {
-      interval = setInterval(countDown, 1000, minute);
+      interval = setInterval(countDown, 1000);
     }
   } else {
     clearInterval(interval);
@@ -56,16 +56,14 @@ play.addEventListener("click", () => {
   }
 });
 
-function countDown(min) {
+function countDown() {
   if (minute.val === 0 && second.val === 0) {
-    alert("done!");
+    alert("Finished! Thank you for helping! ❤️");
     clearInterval(interval);
-    timer.innerHTML = `00:00 😊`;
-  }
-  if (second.val === 0) {
+  } else if (second.val === 0 && minute.val !== 0) {
     minute.val--;
     second.val = 59;
-  } else {
+  } else if (second.val !== 0) {
     second.val--;
   }
   if (second.val < 10) {
