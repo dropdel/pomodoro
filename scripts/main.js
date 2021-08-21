@@ -4,8 +4,8 @@ const lbreak = document.querySelector(".lbreak");
 const sbreak = document.querySelector(".sbreak");
 const timer = document.querySelector("time");
 const player = document.querySelector("#play");
-let minute = { val: 0 };
-let second = { val: 0 };
+let minute = { val: null };
+let second = { val: null };
 let interval;
 // Properly organized.
 function removeStyling(el) {
