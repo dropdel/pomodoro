@@ -61,8 +61,8 @@ play.addEventListener("click", () => {
       second.val = 60;
       interval = setInterval(countDown, 1000);
     } else if (timer.innerHTML.includes("5:00")) {
-      minute.val = 0;
-      second.val = 4;
+      minute.val = 4;
+      second.val = 60;
       interval = setInterval(countDown, 1000);
     } else if (timer.innerHTML.includes("20:00")) {
       minute.val = 19;
