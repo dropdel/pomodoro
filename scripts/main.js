@@ -4,9 +4,12 @@ const lbreak = document.querySelector(".lbreak");
 const sbreak = document.querySelector(".sbreak");
 const timer = document.querySelector("time");
 const player = document.querySelector("#play");
+
 let minute = { val: null };
 let second = { val: null };
+
 let interval;
+
 // Properly organized.
 function removeStyling(el) {
   el.style.background = "rgb(27, 21, 68)";
@@ -18,7 +21,9 @@ function bgHighlight(e) {
   removeStyling(pomo);
   removeStyling(lbreak);
   removeStyling(sbreak);
-  e.target.style.background = "red";
+  // e.target.style.background = "#D01C1FFF";
+  e.target.style.background = "rgb(63,94,251)";
+  e.target.style.background = `radial-gradient(circle, rgba(63,94,251,1) 100%, rgba(252,70,107,1) 100%)`;
   e.target.style.opacity = "1";
   e.target.style.fontWeight = "bolder";
   clearInterval(interval);
