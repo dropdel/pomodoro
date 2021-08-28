@@ -10,17 +10,16 @@ let second = { val: null };
 
 let interval;
 
-// Properly organized.
 function removeStyling(el) {
-  el.style.background = "rgb(27, 21, 68)";
-  el.style.opacity = "0.5";
-  el.style.fontWeight = "lighter";
+  el.map((a) => {
+    a.style.background = "rgb(27, 21, 68)";
+    a.style.opacity = "0.5";
+    a.style.fontWeight = "lighter";
+  });
 }
-// Properly organized.
+
 function bgHighlight(e) {
-  removeStyling(pomo);
-  removeStyling(lbreak);
-  removeStyling(sbreak);
+  removeStyling([pomo, lbreak, sbreak]);
   // e.target.style.background = "#D01C1FFF";
   e.target.style.background = "rgb(63,94,251)";
   e.target.style.background = `radial-gradient(circle, rgba(63,94,251,1) 100%, rgba(252,70,107,1) 100%)`;
@@ -28,7 +27,6 @@ function bgHighlight(e) {
   e.target.style.fontWeight = "bolder";
   clearInterval(interval);
   player.innerHTML = "play";
-  console.log(minute.val, second.val);
   if (e.target.innerHTML.includes("pomodoro")) {
     timer.innerHTML = "25:00";
   } else if (e.target.innerHTML.includes("short break")) {
@@ -37,6 +35,24 @@ function bgHighlight(e) {
     timer.innerHTML = "20:00";
   }
 }
+
+function countDown() {
+  if (minute.val === 0 && second.val === 0) {
+    alert("Finished! Will be including an alarm sound soon!");
+    clearInterval(interval);
+  } else if (second.val === 0 && minute.val !== 0) {
+    minute.val--;
+    second.val = 59;
+  } else if (second.val !== 0) {
+    second.val--;
+  }
+  if (second.val < 10) {
+    timer.innerHTML = `${minute.val}:0${second.val}`;
+  } else {
+    timer.innerHTML = `${minute.val}:${second.val}`;
+  }
+}
+
 play.addEventListener("click", () => {
   if (player.innerHTML.includes("play")) {
     player.innerHTML = "pause";
@@ -52,28 +68,9 @@ play.addEventListener("click", () => {
       minute.val = 19;
       second.val = 60;
       interval = setInterval(countDown, 1000);
-    } else {
-      interval = setInterval(countDown, 1000);
     }
   } else {
     clearInterval(interval);
     player.innerHTML = "play";
   }
 });
-
-function countDown() {
-  if (minute.val === 0 && second.val === 0) {
-    alert("Finished! Thank you for helping! ❤️");
-    clearInterval(interval);
-  } else if (second.val === 0 && minute.val !== 0) {
-    minute.val--;
-    second.val = 59;
-  } else if (second.val !== 0) {
-    second.val--;
-  }
-  if (second.val < 10) {
-    timer.innerHTML = `${minute.val}:0${second.val}`;
-  } else {
-    timer.innerHTML = `${minute.val}:${second.val}`;
-  }
-}
